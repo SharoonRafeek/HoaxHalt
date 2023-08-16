@@ -16,7 +16,6 @@ const debunkedClaims = [
   },
   // Add more debunked claims here
 ];
-
 const HomePage: React.FC = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-6">

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import SignIn from "../SignIn";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +17,6 @@ const Navbar: React.FC = () => {
         <Link className="text-white text-lg font-semibold" href="/">
           HoaxHalt
         </Link>
-
-        {/* Hamburger menu */}
         <button
           onClick={toggleMenu}
           className={`md:hidden ${menuOpen ? "text-white" : "text-gray-300"}`}
@@ -28,7 +27,6 @@ const Navbar: React.FC = () => {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Cross Icon */}
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -51,7 +49,6 @@ const Navbar: React.FC = () => {
           )}
         </button>
 
-        {/* Nav links */}
         <div
           className={`md:flex md:items-center ${
             menuOpen ? "block" : "hidden"
@@ -61,28 +58,9 @@ const Navbar: React.FC = () => {
             className="text-white hover:underline hover:text-gray-200 block md:inline-block mt-4 md:mt-0 md:ml-6"
             href="/"
           >
-            Home
-          </Link>
-          <Link
-            className="text-white hover:underline hover:text-gray-200 block md:inline-block mt-4 md:mt-0 md:ml-6"
-            href="/"
-          >
-            About
-          </Link>
-          <Link
-            className="text-white hover:underline hover:text-gray-200 block md:inline-block mt-4 md:mt-0 md:ml-6"
-            href="/"
-          >
             Contact
           </Link>
-          <Link
-            className="text-white font-bold hover:underline hover:text-gray-200 block md:inline-block mt-4 md:mt-0 md:ml-6"
-            href="/"
-          >
-            Login
-          </Link>
-
-          {/* Add more nav links as needed */}
+          <SignIn />
         </div>
       </div>
     </nav>
