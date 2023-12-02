@@ -54,12 +54,6 @@ const Navbar: React.FC = () => {
             menuOpen ? "block" : "hidden"
           } md:block`}
         >
-          <Link
-            className="text-white hover:underline hover:text-gray-200 block md:inline-block mt-4 md:mt-0 md:ml-6"
-            href="/"
-          >
-            Contact
-          </Link>
           <SignIn />
         </div>
       </div>
